@@ -1,0 +1,13 @@
+# 金融数据MCP服务器依赖
+
+# MCP Protocol SDK
+mcp>=1.0.0
+
+# 金融数据源
+akshare>=1.10.0
+
+# 数据处理
+pandas>=2.0.0
+
+# Markdown表格渲染（pandas.to_markdown依赖）
+tabulate>=0.9.0
