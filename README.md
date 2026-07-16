@@ -1,5 +1,7 @@
 # 金融数据 MCP 服务器 (mcp-financial-data)
 
+[![CI](https://github.com/wzx11223344/mcp-financial-data/actions/workflows/ci.yml/badge.svg)](https://github.com/wzx11223344/mcp-financial-data/actions/workflows/ci.yml)
+
 基于 [MCP (Model Context Protocol)](https://modelcontextprotocol.io) 协议的金融数据服务器，使用 [FastMCP](https://github.com/jlowin/fastmcp) 框架构建，为 AI 客户端提供实时的中国 A 股 / 基金 / 宏观经济 / 市场行情数据工具。
 
 ## 功能特性
@@ -152,6 +154,20 @@ python -m py_compile mcp_financial_data/*.py
 2. 在 `server.py` 中用 `@mcp.tool()` 装饰器注册
 3. 确保有完整的类型提示和 docstring
 4. 用 `py_compile` 验证语法
+
+## 测试
+
+运行单元测试：
+
+```bash
+pip install pytest flake8
+pytest tests/ -v --tb=short
+```
+
+代码质量检查：
+
+```bash
+flake8 . --count --max-line-length=120 --statistics
 
 ## License
 
